@@ -1,0 +1,22 @@
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\bin\Debug\CLIENT.exe.config
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\bin\Debug\CLIENT.exe
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\bin\Debug\CLIENT.pdb
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\obj\Debug\CLIENT.csprojResolveAssemblyReference.cache
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\obj\Debug\CLIENT.frmCLIENT.resources
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\obj\Debug\CLIENT.Properties.Resources.resources
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\obj\Debug\CLIENT.csproj.GenerateResource.cache
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\obj\Debug\CLIENT.csproj.CoreCompileInputs.cache
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\obj\Debug\CLIENT.exe
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CLIENT\obj\Debug\CLIENT.pdb
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\bin\Debug\CLIENT.exe.config
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\bin\Debug\CLIENT.exe
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\bin\Debug\CLIENT.pdb
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Debug\CLIENT.csproj.AssemblyReference.cache
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Debug\CLIENT.csproj.SuggestedBindingRedirects.cache
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Debug\CLIENT.frmCLIENT.resources
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Debug\CLIENT.Properties.Resources.resources
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Debug\CLIENT.csproj.GenerateResource.cache
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Debug\CLIENT.csproj.CoreCompileInputs.cache
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Debug\CLIENT.exe
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Debug\CLIENT.pdb
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Debug\CLIENT.Login.resources

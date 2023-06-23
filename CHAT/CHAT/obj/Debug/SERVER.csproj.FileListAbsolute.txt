@@ -1,0 +1,21 @@
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\bin\Debug\CHAT.exe.config
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\bin\Debug\CHAT.exe
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\bin\Debug\CHAT.pdb
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\obj\Debug\SERVER.csprojResolveAssemblyReference.cache
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\obj\Debug\CHAT.Form1.resources
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\obj\Debug\CHAT.Properties.Resources.resources
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\obj\Debug\SERVER.csproj.GenerateResource.cache
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\obj\Debug\SERVER.csproj.CoreCompileInputs.cache
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\obj\Debug\CHAT.exe
+C:\Users\Kuong Fam\Documents\Visual Studio 2017\CHAT\CHAT\obj\Debug\CHAT.pdb
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CHAT\bin\Debug\CHAT.exe.config
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CHAT\bin\Debug\CHAT.exe
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CHAT\bin\Debug\CHAT.pdb
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CHAT\obj\Debug\SERVER.csproj.AssemblyReference.cache
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CHAT\obj\Debug\SERVER.csproj.SuggestedBindingRedirects.cache
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CHAT\obj\Debug\CHAT.Form1.resources
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CHAT\obj\Debug\CHAT.Properties.Resources.resources
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CHAT\obj\Debug\SERVER.csproj.GenerateResource.cache
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CHAT\obj\Debug\SERVER.csproj.CoreCompileInputs.cache
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CHAT\obj\Debug\CHAT.exe
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CHAT\obj\Debug\CHAT.pdb
