@@ -72,11 +72,13 @@
             this.txtNameUser.Multiline = true;
             this.txtNameUser.Name = "txtNameUser";
             this.txtNameUser.ReadOnly = true;
-            this.txtNameUser.Size = new System.Drawing.Size(90, 32);
+            this.txtNameUser.Size = new System.Drawing.Size(116, 32);
             this.txtNameUser.TabIndex = 4;
             // 
             // frmCLIENT
             // 
+            this.AcceptButton = this.btnSend;
+            this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 405);

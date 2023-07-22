@@ -19,4 +19,4 @@ T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIE
 T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Debug\CLIENT.csproj.CoreCompileInputs.cache
 T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Debug\CLIENT.exe
 T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Debug\CLIENT.pdb
-T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Debug\CLIENT.Login.resources
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Debug\CLIENT.frmLogin.resources

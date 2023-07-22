@@ -1,6 +1,6 @@
 ﻿namespace CLIENT
 {
-    partial class Login
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -78,8 +78,9 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Password";
             // 
-            // Login
+            // frmLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 205);
@@ -88,7 +89,7 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.btnLogin);
-            this.Name = "Login";
+            this.Name = "frmLogin";
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();

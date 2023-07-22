@@ -49,13 +49,17 @@ namespace CHAT
             //đợi kết nối từ client
             server.Bind(IP);
             //tạo 1 luồng lăng nghe từ client
-            Thread Listen = new Thread( ()  => {
+            Thread Listen = new Thread(() =>
+            {
                 try
                 {
                     while (true)
                     {
                         server.Listen(100);
                         Socket client = server.Accept();//nếu lăng nghe thành công thì server chấp nhận kết nối
+                        IPEndPoint clientEndPoint = (IPEndPoint)client.RemoteEndPoint;
+                        string clientIP = clientEndPoint.Address.ToString();
+                        AddMessage(clientIP + " connected!");
                         clientList.Add(client);//thêm các client được server accept vào list
                         //tạo luồng nhận thông tin từ client
                         Thread receive = new Thread(Receive);
@@ -70,7 +74,7 @@ namespace CHAT
                     IP = new IPEndPoint(IPAddress.Any, 1997);
                     server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
                 }
-            } );
+            });
             Listen.IsBackground = true;
             Listen.Start();
         }
@@ -97,12 +101,12 @@ namespace CHAT
                     string message = (string)Deseriliaze(data);
 
                     //khi 1 client gửi thì cả server và các client (ngoại trừ thằng client vừa gửi) cùng nhận đc
-                    foreach(Socket item in clientList)
+                    foreach (Socket item in clientList)
                     {
-                        if(item != null && item != client )
+                        if (item != null && item != client)
                         {
                             item.Send(Serialize(message));
-                        }                    
+                        }
                     }
 
                     AddMessage(message);
@@ -143,11 +147,6 @@ namespace CHAT
             BinaryFormatter formatter = new BinaryFormatter();
             //chuyển đổi dữ liệu và lưu lại kết quả 
             return formatter.Deserialize(stream);
-        }
-
-        private void lsvMessage_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,0 +1,12 @@
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\bin\Release\CLIENT.exe.config
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\bin\Release\CLIENT.exe
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\bin\Release\CLIENT.pdb
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Release\CLIENT.csproj.AssemblyReference.cache
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Release\CLIENT.csproj.SuggestedBindingRedirects.cache
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Release\CLIENT.frmCLIENT.resources
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Release\CLIENT.frmLogin.resources
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Release\CLIENT.Properties.Resources.resources
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Release\CLIENT.csproj.GenerateResource.cache
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Release\CLIENT.csproj.CoreCompileInputs.cache
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Release\CLIENT.exe
+T:\LearnSpace\Git Manager\Redis Chat Winform App\App\CHAT qua socket C\CHAT\CLIENT\obj\Release\CLIENT.pdb

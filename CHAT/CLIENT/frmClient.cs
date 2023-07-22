@@ -22,7 +22,7 @@ namespace CLIENT
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;//tránh việc đụng độ khi sử dụng tài nguyên giữa các thread
-            this.username = username.ToUpper();
+            this.username = GetLocalIPAddress();
             Connect();
         }
 
@@ -38,7 +38,7 @@ namespace CLIENT
         void Connect()
         {
             //IP là địa chỉ của server.Khởi tạo địa chỉ IP và socket để kết nối
-            IP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 1997);
+            IP = new IPEndPoint(IPAddress.Parse("10.86.7.148"), 1997);
             client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
             //bắt đầu kết nôi. Nếu ko kết nối được thì hiện thông báo
             try
@@ -134,6 +134,30 @@ namespace CLIENT
         private void frmCLIENT_Load(object sender, EventArgs e)
         {
             txtNameUser.Text = username;
+        }
+
+        private string GetLocalIPAddress()
+        {
+            string localIP = "?";
+            try
+            {
+                // Lấy địa chỉ IP của client sử dụng Dns.GetHostEntry
+                IPHostEntry host = Dns.GetHostEntry(Dns.GetHostName());
+                foreach (IPAddress ip in host.AddressList)
+                {
+                    if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                    {
+                        localIP = ip.ToString();
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            return localIP;
         }
     }
 }
