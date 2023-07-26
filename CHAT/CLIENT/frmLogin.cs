@@ -23,7 +23,7 @@ namespace CLIENT
             InitializeComponent();
             users = new List<User>();
 
-            users.Add(new User("trongps", "123", "Phan Sỹ Trọng", GetLocalIPAddress(),false));
+            users.Add(new User("trongps", "123", "Phan Sỹ Trọng", GetLocalIPAddress(), false));
             users.Add(new User("kha", "123", "Cao Văn Kha", GetLocalIPAddress(), false));
             users.Add(new User("truc", "123", "Ngô Thị Tuyết Trúc", GetLocalIPAddress(), false));
             users.Add(new User("thinh", "123", "Trần Khánh Thịnh", GetLocalIPAddress(), false));
@@ -35,6 +35,7 @@ namespace CLIENT
             {
                 if (user.Username == enteredUsername && user.Password == enteredPassword)
                 {
+                    user.Status = true;
                     return user;
                 }
             }
@@ -45,12 +46,18 @@ namespace CLIENT
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
             User userInputted = CheckLogin(users, txtUserName.Text, txtPassword.Text);
-            if (userInputted!=null)
+            if (userInputted != null)
             {
                 frmCLIENT frmClient = new frmCLIENT(userInputted);
-                frmClient.Show();
-                this.Hide();
-
+                if (frmClient.IsServerOnline())
+                {
+                    frmClient.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Server offline, Please try again!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {

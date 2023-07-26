@@ -22,6 +22,8 @@ namespace CLIENT
     {
         private string ServerIP;
         private User User;
+        private IPEndPoint IP;
+        private Socket client;
         public frmCLIENT(User User)
         {
             InitializeComponent();
@@ -33,11 +35,9 @@ namespace CLIENT
 
         private void frmCLIENT_FormClosed(object sender, FormClosedEventArgs e)
         {
+            User.Status = false;
             Application.Exit();
         }
-
-        IPEndPoint IP;
-        Socket client;
 
         //kết nối đến server
         //void Connect()
@@ -62,10 +62,12 @@ namespace CLIENT
         //    listen.Start();
         //}
 
+
+
         private void Connect()
         {
             // Khởi tạo địa chỉ IP và socket để kết nối tới máy chủ
-            IP = new IPEndPoint(IPAddress.Parse(GetLocalIPAddress()), 1997);
+            IP = new IPEndPoint(IPAddress.Parse(ServerIP), 1997);
             client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 
             // Bắt đầu kết nối. Nếu không kết nối được, hiện thông báo lỗi
@@ -82,14 +84,18 @@ namespace CLIENT
             catch (SocketException ex)
             {
                 // Nếu có lỗi kết nối, hiện thông báo lỗi cụ thể
-                MessageBox.Show($"Connection Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
             }
         }
 
         //đóng kết nối đến server
         void Close()
         {
-            client.Close();
+            if (client != null)
+            {
+                client.Close();
+            }
+            this.Hide();
         }
 
         //gửi dữ liệu
@@ -97,23 +103,23 @@ namespace CLIENT
         {
             //nếu textboc khác rỗng thì mới gửi tin
             if (txbMessage.Text != string.Empty && IsServerOnline())
-            {  
-                client.Send(Serialize(new UserMessage(User.Username, txbMessage.Text, DateTime.Now)));
-            }
-            else
+            //if (txbMessage.Text != string.Empty)
             {
-                MessageBox.Show($"Connection Error: Server is offline!, Exit now!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Application.Exit();
+                client.Send(Serialize(new UserMessage(User.Username, txbMessage.Text, DateTime.Now)));
             }
         }
 
         //check status server
-        private bool IsServerOnline()
+        public bool IsServerOnline()
         {
             try
             {
                 // IP và cổng của server
-                string serverIP = GetLocalIPAddress(); // Thay bằng địa chỉ IP của server
+                string serverIP = ServerIP; // Thay bằng địa chỉ IP của server
+                if (serverIP == null)
+                {
+                    return false;
+                }
                 int serverPort = 1997; // Thay bằng cổng của server
 
                 // Tạo socket để kết nối tới server
@@ -129,9 +135,8 @@ namespace CLIENT
                     return true;
                 }
             }
-            catch (SocketException)
+            catch (SocketException se)
             {
-                // Nếu có lỗi khi kết nối, server không hoạt động
                 return false;
             }
         }
@@ -173,7 +178,7 @@ namespace CLIENT
             //khởi tạo đối tượng BinaryFormatter để phân mảnh dữ liệu sang kiểu byte
             BinaryFormatter formatter = new BinaryFormatter();
             //phân mảnh rồi ghi vào stream
-            formatter.Serialize(stream, obj.SenderName +":"+ obj.Content);
+            formatter.Serialize(stream, obj.SenderName + ":" + obj.Content);
             //từ stream chuyển các các byte thành dãy rồi cbi gửi đi
             return stream.ToArray();
         }
@@ -197,7 +202,10 @@ namespace CLIENT
 
         private void frmCLIENT_Load(object sender, EventArgs e)
         {
-            txtNameUser.Text = User.Username;
+            if (IsServerOnline())
+            {
+                txtNameUser.Text = User.Username;
+            }
         }
 
         private string GetLocalIPAddress()

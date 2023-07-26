@@ -53,18 +53,24 @@ namespace CHAT
             {
                 try
                 {
+                    int i = 0;
                     while (true)
                     {
+
                         server.Listen(100);
                         Socket client = server.Accept();//nếu lăng nghe thành công thì server chấp nhận kết nối
                         IPEndPoint clientEndPoint = (IPEndPoint)client.RemoteEndPoint;
                         string clientIP = clientEndPoint.Address.ToString();
-                        AddMessage(clientIP + " connected!");
+                        if (i == 0)
+                        {
+                            AddMessage(clientIP + " connected!");
+                        }
                         clientList.Add(client);//thêm các client được server accept vào list
                         //tạo luồng nhận thông tin từ client
                         Thread receive = new Thread(Receive);
                         receive.IsBackground = true;
                         receive.Start(client);
+                        i++;
                     }
                 }
                 /*khi kết nối đến n client mà có 1 client disconnect thì server sẽ chạy vòng lặp while liên tục để
@@ -114,6 +120,9 @@ namespace CHAT
             }
             catch
             {
+                //string clientIP = ((IPEndPoint)client.RemoteEndPoint).Address.ToString();
+                //AddMessage("Client " + clientIP + " đã offline!");
+
                 clientList.Remove(client);
                 client.Close();
             }
