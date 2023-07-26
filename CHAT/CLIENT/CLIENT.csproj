@@ -48,8 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Logger.cs" />
-    <Compile Include="Data\User.cs" />
+    <Compile Include="Models\Logger.cs" />
+    <Compile Include="Models\UserMessage.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="frmClient.cs">
       <SubType>Form</SubType>
     </Compile>

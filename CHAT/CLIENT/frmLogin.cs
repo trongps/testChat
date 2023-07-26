@@ -23,31 +23,31 @@ namespace CLIENT
             InitializeComponent();
             users = new List<User>();
 
-            users.Add(new User("trongps", "123", "Phan Sỹ Trọng", GetLocalIPAddress()));
-            users.Add(new User("kha", "123", "Cao Văn Kha", GetLocalIPAddress()));
-            users.Add(new User("truc", "123", "Ngô Thị Tuyết Trúc", GetLocalIPAddress()));
-            users.Add(new User("thinh", "123", "Trần Khánh Thịnh", GetLocalIPAddress()));
+            users.Add(new User("trongps", "123", "Phan Sỹ Trọng", GetLocalIPAddress(),false));
+            users.Add(new User("kha", "123", "Cao Văn Kha", GetLocalIPAddress(), false));
+            users.Add(new User("truc", "123", "Ngô Thị Tuyết Trúc", GetLocalIPAddress(), false));
+            users.Add(new User("thinh", "123", "Trần Khánh Thịnh", GetLocalIPAddress(), false));
         }
 
-        public static bool CheckLogin(List<User> userList, string enteredUsername, string enteredPassword)
+        public static User CheckLogin(List<User> userList, string enteredUsername, string enteredPassword)
         {
             foreach (User user in userList)
             {
                 if (user.Username == enteredUsername && user.Password == enteredPassword)
                 {
-                    return true;
+                    return user;
                 }
             }
 
-            return false;
+            return null;
         }
 
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            bool check = CheckLogin(users, txtUserName.Text, txtPassword.Text);
-            if (check)
+            User userInputted = CheckLogin(users, txtUserName.Text, txtPassword.Text);
+            if (userInputted!=null)
             {
-                frmCLIENT frmClient = new frmCLIENT(txtUserName.Text);
+                frmCLIENT frmClient = new frmCLIENT(userInputted);
                 frmClient.Show();
                 this.Hide();
 
